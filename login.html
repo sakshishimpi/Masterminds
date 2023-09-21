@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<title>Login page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function validateForm() {
+   //var x = document.forms["myForm"]["fname"].value;
+   var un = document.getElementById("u1").value;
+   var pass = document.getElementById("p1").value;
+   var r1 = document.getElementById("r1").checked;
+   if (un == "" || pass == "" || r1==false) {
+    alert("Username/Password or country is not selected");
+  }
+}
+
+function resetValue(){
+        var element = document.getElementById(" f1 ");
+         element.reset()
+      }
+
+</script>
+
+<body>
+    <div>
+        <h3 style="margin-top: 0px;">Customer Login</h3>
+        <hr>
+    <form name="myForm" id="f1">
+        <label>User Name </label>
+        <input type="text" id="u1" style="width: 200px;height:30px" placeholder="Enter username." required><br>
+        <label>Password  </label>
+        <input type="password" id="p1" style="width: 200px;height:30px" placeholder="Enter Password." required><br>
+        
+
+        <input type="submit" class="button" value="Login" onclick="validateForm()">&nbsp; &nbsp; &nbsp;
+        <input type="reset" class="button" value="Reset" onclick = "resetValue()">
+   
+    </form>
+
+</div>
+</body>
+</html>
